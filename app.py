@@ -93,7 +93,7 @@ with st.form(key="signature_form"):
     cargo_usuario = st.text_input("Seu Cargo (Ex: Analista de Suporte)")
     telefone_usuario = st.text_input("Telefone com DDD (Ex: 19912345678)")
 
-    submit_button = st.form_submit_button(label="✔️ Gerar Instalador")
+    submit_button = st.form_submit_button(label="Gerar Instalador")
 
 if submit_button:
     if not all([nome_completo, cargo_usuario, telefone_usuario]):
@@ -113,7 +113,7 @@ if submit_button:
             """)
 
             st.download_button(
-                label="📥 Baixar Pacote de Instalação",
+                label="Baixar Pacote de Instalação",
                 data=zip_data,
                 file_name=f"Instalador_Assinatura_{nome_completo.replace(' ', '_')}.zip",
                 mime="application/zip"
